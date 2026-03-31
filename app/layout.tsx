@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import "./globals.css";
@@ -18,14 +19,6 @@ export const metadata: Metadata = {
     description: "Backend Developer",
     url: "https://aryansaxena.vercel.app",
     siteName: "Aryan Saxena Portfolio",
-    images: [
-      {
-        url: "/preview.png",
-        width: 1200,
-        height: 630,
-        alt: "Aryan Saxena Portfolio Preview",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -33,10 +26,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aryan Saxena",
     description: "Backend Developer",
-    images: ["/preview.png"],
-  },
-  icons: {
-    icon: "/preview.png",
   },
 };
 
@@ -47,7 +36,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${spaceMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-mono">{children}</body>
+      <body className="min-h-full flex flex-col font-mono relative">
+        {/* Saturn decoration - top left corner with 70% visibility */}
+        <Image
+          src="/saturn.webp"
+          alt="Saturn decoration"
+          width={400}
+          height={400}
+          className="absolute top-0 left-0 z-0 pointer-events-none opacity-80"
+          style={{
+            marginTop: "-20px",
+            marginLeft: "-120px",
+          }}
+          priority
+        />
+        <div className="relative z-10">{children}</div>
+      </body>
     </html>
   );
 }

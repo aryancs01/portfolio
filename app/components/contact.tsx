@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="border-t border-white/10 bg-neutral-950 py-28 text-white md:py-36"
+      className="border-t border-white/10 py-28 text-white md:py-36"
     >
       <div className="mx-auto w-full max-w-6xl px-6 text-center">
         <h2 className="mx-auto max-w-4xl text-4xl font-bold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl">

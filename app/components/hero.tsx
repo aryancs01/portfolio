@@ -2,9 +2,8 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden bg-neutral-950 pt-24 text-white"
+      className="relative flex min-h-screen items-center overflow-hidden pt-24 text-white"
     >
-      <div className="pointer-events-none absolute right-[-12%] top-[14%] h-144 w-xl rounded-full bg-[radial-gradient(circle,rgba(249,115,22,0.25)_0%,rgba(0,0,0,0)_62%)] blur-3xl" />
 
       <div className="relative mx-auto w-full max-w-6xl px-6 py-20">
         <p className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-orange-400 sm:text-base">

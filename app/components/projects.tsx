@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type Project = {
     title: string;
     description: string;
@@ -25,17 +27,27 @@ const projects: Project[] = [
 
 export default function Projects() {
     return (
-        <section id="projects" className="bg-neutral-950 py-24 text-white md:py-32">
+        <section id="projects" className="py-24 text-white md:py-32">
             <div className="mx-auto w-full max-w-6xl px-6">
-                <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                    Selected Work.
-                </h2>
+                <div className="inline-flex items-center gap-3 sm:gap-4">
+                    <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                        Selected Work
+                    </h2>
+                    <Image
+                        src="/eye.png"
+                        alt=""
+                        width={28}
+                        height={28}
+                        aria-hidden="true"
+                        className="h-5 w-5 opacity-90 sm:h-6 sm:w-6"
+                    />
+                </div>
 
                 <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
                     {projects.map((project) => (
                         <article
                             key={project.title}
-                            className="flex h-full flex-col rounded-2xl border border-white/10 bg-zinc-900/60 p-8 transition hover:-translate-y-1.5 hover:border-zinc-500"
+                            className="flex h-full flex-col rounded-2xl border border-white/10 p-8 transition hover:-translate-y-1.5 hover:border-zinc-500"
                         >
                             <h3 className="text-3xl font-semibold tracking-tight">{project.title}</h3>
 
@@ -47,7 +59,7 @@ export default function Projects() {
                                 {project.tech.map((item) => (
                                     <li
                                         key={item}
-                                        className="rounded-full border border-white/10 bg-neutral-950 px-4 py-1.5 text-xs text-zinc-300"
+                                        className="rounded-full border border-white/10 px-4 py-1.5 text-xs text-zinc-300"
                                     >
                                         {item}
                                     </li>

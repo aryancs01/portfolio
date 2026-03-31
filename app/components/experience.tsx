@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type ExperienceItem = {
   company: string;
   duration: string;
@@ -24,11 +26,21 @@ const experienceItems: ExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-neutral-950 py-24 text-white md:py-32">
+    <section id="experience" className="py-24 text-white md:py-32">
       <div className="mx-auto w-full max-w-6xl px-6">
-        <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-          Experience.
-        </h2>
+        <div className="inline-flex items-center gap-3 sm:gap-4">
+          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            Experience
+          </h2>
+          <Image
+            src="/eye.png"
+            alt=""
+            width={28}
+            height={28}
+            aria-hidden="true"
+            className="h-5 w-5 opacity-90 sm:h-6 sm:w-6"
+          />
+        </div>
 
         <div className="mt-12 space-y-12 md:mt-16">
           {experienceItems.map((item) => (

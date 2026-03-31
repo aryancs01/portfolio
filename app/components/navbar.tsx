@@ -6,7 +6,7 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 backdrop-blur-xl">
       <nav
         className="mx-auto flex h-24 w-full max-w-6xl items-center justify-between px-6"
         aria-label="Primary"
