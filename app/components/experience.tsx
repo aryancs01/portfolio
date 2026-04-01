@@ -13,14 +13,14 @@ const experienceItems: ExperienceItem[] = [
     duration: "Sept 2025 – March 2026",
     role: "Backend Intern",
     summary:
-      "Worked on backend systems, building and optimizing APIs while leading backend development for key features and projects. Focused on system architecture, data flow, and core logic. Simplified complex systems by replacing multiple dependencies with a single backend, improving performance and maintainability. Also worked on automation, AI agents, and external API integrations.",
+      "I work mostly on the backend — building APIs, designing the architecture, and making sure everything runs smoothly. I’ve led development for key features and like simplifying messy systems into something clean and easy to manage. Also played around with automation, real-time systems, payment processing and integrating different APIs.",
   },
   {
     company: "Compitcom Digital Solutions Pvt. Ltd.",
     duration: "June 2025 – July 2025",
     role: "Software Developer Intern",
     summary:
-      "Built and improved full-stack features, including a slot booking system with real-time updates, payments, and notifications. Focused on performance, reliability, and smooth user experience. Worked on multiple web applications, handling UI improvements, bug fixes, and optimizations. Also contributed to integrations and system monitoring to improve overall stability.",
+      "Built and improved full-stack features, including a slot booking system with real-time updates, payments, and notifications. Focused on keeping things fast, reliable, and smooth for users. Worked across multiple web apps — fixing bugs, improving UI, and optimizing performance. Also helped with integrations and basic system monitoring to keep everything stable.",
   },
 ];
 

@@ -24,16 +24,18 @@ export default function Technologies() {
           Technologies.
         </h2>
 
-        <ul className="mt-12 flex flex-wrap gap-4 md:mt-16">
-          {technologies.map((tech) => (
-            <li
-              key={tech}
-              className="rounded-full border border-white/10 px-6 py-3 text-base text-zinc-100 transition hover:border-orange-500 hover:text-orange-400"
-            >
-              {tech}
-            </li>
-          ))}
-        </ul>
+        <div className="mt-12 md:mt-16">
+          <ul className="mx-auto grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3">
+            {technologies.map((tech) => (
+              <li
+                key={tech}
+                className="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-center text-sm text-zinc-100 transition hover:-translate-y-0.5 hover:border-orange-500 hover:text-orange-400 sm:text-base"
+              >
+                {tech}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
