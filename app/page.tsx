@@ -26,26 +26,11 @@ export default function Home() {
             alt="Handshake"
             width={520}
             height={320}
-            className="h-auto w-full max-w-xs rounded-xl border border-white/10 object-cover sm:max-w-sm md:max-w-md"
+            className="h-auto w-full max-w-64 rounded-xl border border-white/10 object-cover sm:max-w-72 md:max-w-80"
             priority
           />
         </div>
       </main>
-
-      {/* <div
-        aria-hidden="true"
-        className="pointer-events-none fixed bottom-4 left-4 z-40 hidden 2xl:block"
-      >
-        <Image
-          src={CodingImage}
-          alt=""
-          width={160}
-          height={160}
-          unoptimized
-          priority
-          className="h-auto w-32 xl:w-40"
-        />
-      </div> */}
     </>
   );
 }
