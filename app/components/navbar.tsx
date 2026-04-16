@@ -28,7 +28,8 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1e5k1AGbwy7BQzDOVemggRM3WqcIbDrz6/view?usp=drive_link"
+              target="_blank"
               className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition hover:-translate-y-0.5 hover:bg-orange-500 hover:text-white"
             >
               Resume

@@ -4,10 +4,33 @@ type Project = {
     title: string;
     description: string;
     tech: string[];
-    href: string;
+    links: {
+        github?: string;
+        live?: string;
+    };
 };
 
 const projects: Project[] = [
+    {
+        title: "O2Chat",
+        description:
+            "A modern, multi-modal AI assistant with real-time conversational AI streaming, cloud-based UI sandbox for component generation, and secure authentication.",
+        tech: [
+            "Next.js 16",
+            "TypeScript",
+            "OpenRouter",
+            "Google Gemini",
+            "E2B",
+            "PostgreSQL",
+            "Prisma",
+            "Better Auth",
+            "Tailwind CSS",
+        ],
+        links: {
+            github: "https://github.com/aryancs01/o2chatbot",
+            live: "https://o2chatbot.vercel.app/",
+        },
+    },
     {
         title: "Bitwise",
         description:
@@ -21,7 +44,9 @@ const projects: Project[] = [
             "BullMQ",
             "Docker",
         ],
-        href: "https://github.com/aryancs01/bitwise",
+        links: {
+            github: "https://github.com/aryancs01/bitwise",
+        },
     },
 ];
 
@@ -43,7 +68,7 @@ export default function Projects() {
                     />
                 </div>
 
-                <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 xl:grid-cols-3">
+                <div className="mt-12 grid grid-cols-1 gap-6 md:mt-16 md:grid-cols-2 lg:gap-8">
                     {projects.map((project) => (
                         <article
                             key={project.title}
@@ -66,13 +91,26 @@ export default function Projects() {
                                 ))}
                             </ul>
 
-                            <a
-                                href={project.href}
-                                className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-zinc-100 transition hover:text-orange-400"
-                            >
-                                View Source
-                                <span aria-hidden="true">-&gt;</span>
-                            </a>
+                            <div className="mt-8 flex gap-4">
+                                {project.links.github && (
+                                    <a
+                                        href={project.links.github}
+                                        className="inline-flex items-center gap-2 text-md font-medium text-zinc-100 transition hover:text-orange-400"
+                                    >
+                                        GitHub
+                                        <span aria-hidden="true">-&gt;</span>
+                                    </a>
+                                )}
+                                {project.links.live && (
+                                    <a
+                                        href={project.links.live}
+                                        className="inline-flex items-center gap-2 text-md font-medium transition text-green-400 hover:text-orange-400"
+                                    >
+                                        Live
+                                        <span aria-hidden="true">-&gt;</span>
+                                    </a>
+                                )}
+                            </div>
                         </article>
                     ))}
                 </div>

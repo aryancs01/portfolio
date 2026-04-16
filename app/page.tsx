@@ -20,7 +20,7 @@ export default function Home() {
         <Technologies />
         <Contact />
 
-        <div className="flex justify-center px-6 pb-16 md:pb-24">
+        {/* <div className="flex justify-center px-6 pb-16 md:pb-24">
           <Image
             src={HandshakeImage}
             alt="Handshake"
@@ -29,7 +29,7 @@ export default function Home() {
             className="h-auto w-full max-w-64 rounded-xl border border-white/10 object-cover sm:max-w-72 md:max-w-80"
             priority
           />
-        </div>
+        </div> */}
       </main>
     </>
   );
